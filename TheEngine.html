@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="Field.js"></script>
+	<script type="text/javascript" src="Constants.js"></script>
+	<script type="text/javascript" src="OutputCode.js"></script>
+	<style>
+	html, body {
+		margin: 0px;
+	}
+	canvas {
+		display: block;
+		z-index: 1;
+	}
+
+	.Gear1R {
+		z-index: 2;
+		position: absolute;
+		top: 205px;
+		left: 330px;
+		background-color: #f44e4e;
+		border-color: #bf6363;
+		color: : #000;
+	}
+
+	.Gear2R {
+		z-index: 2;
+		position: absolute;
+		top: 270px;
+		left: 290px;
+		background-color: #f44e4e;
+		border-color: #bf6363;
+		color: : #000;
+	}
+
+	.Gear3R {
+		z-index: 2;
+		position: absolute;
+		top: 330px;
+		left: 330px;
+		background-color: #f44e4e;
+		border-color: #bf6363;
+		color: : #000;
+	}
+
+	.Gear1B {
+		z-index: 2;
+		position: absolute;
+		top: 205px;
+		left: 880px;
+		background-color: #5f98e2;
+		border-color: #6182ad;
+		color: : #000;
+	}
+
+	.Gear2B {
+		z-index: 2;
+		position: absolute;
+		top: 270px;
+		left: 920px;
+		background-color: #5f98e2;
+		border-color: #6182ad;
+		color: : #000;
+	}
+
+	.Gear3B {
+		z-index: 2;
+		position: absolute;
+		top: 330px;
+		left: 880px;
+		background-color: #5f98e2;
+		border-color: #6182ad;
+		color: : #000;
+	}
+
+	.ShooterB {
+		z-index: 2;
+		position: absolute;
+		top: 440px;
+		left: 970px;
+		background-color: #5f98e2;
+		border-color: #6182ad;
+		color: : #000;
+	}
+
+	.ShooterR {
+		z-index: 2;
+		position: absolute;
+		top: 440px;
+		left: 245px;
+		background-color: #f44e4e;
+		border-color: #bf6363;
+		color: : #000;
+	}
+
+	.StartPosition1R {
+		z-index: 2;
+		position: absolute;
+		top: 160px;
+		left: 100px;
+		background-color: #f44e4e;
+		border-color: #bf6363;
+		color: : #000;
+	}
+
+	.StartPosition2R {
+		z-index: 2;
+		position: absolute;
+		top: 290px;
+		left: 100px;
+		background-color: #f44e4e;
+		border-color: #bf6363;
+		color: : #000;
+	}
+
+	.StartPosition3R {
+		z-index: 2;
+		position: absolute;
+		top: 380px;
+		left: 100px;
+		background-color: #f44e4e;
+		border-color: #bf6363;
+		color: : #000;
+	}
+
+	.StartPosition1B {
+		z-index: 2;
+		position: absolute;
+		top: 160px;
+		left: 1060px;
+		background-color: #5f98e2;
+		border-color: #6182ad;
+		color: : #000;
+	}
+
+	.StartPosition2B {
+		z-index: 2;
+		position: absolute;
+		top: 290px;
+		left: 1060px;
+		background-color: #5f98e2;
+		border-color: #6182ad;
+		color: : #000;
+	}
+
+	.StartPosition3B {
+		z-index: 2;
+		position: absolute;
+		top: 380px;
+		left: 1060px;
+		background-color: #5f98e2;
+		border-color: #6182ad;
+		color: : #000;
+	}
+
+	.BaselineR {
+		z-index: 2;
+		position: absolute;
+		top: 150px;
+		left: 450px;
+		background-color: #f44e4e;
+		border-color: #bf6363;
+		color: : #000;
+	}
+
+	.BaselineB {
+		z-index: 2;
+		position: absolute;
+		top: 150px;
+		left: 750px;
+		background-color: #5f98e2;
+		border-color: #6182ad;
+		color: : #000;
+	}
+
+	.Compile {
+		z-index: 2;
+		position: absolute;
+		top: 550px;
+		left: 600px;
+		background-color: #df42f4;
+		border-color: #864b8e;
+		color: : #000;
+	}
+	</style>
+</head>
+<body>
+<button class="Gear1R" id="Gear1R">Gear 1</button>
+<button class="Gear2R" id="Gear2R">Gear 2</button>
+<button class="Gear3R" id="Gear3R">Gear 3</button>
+
+<button class="Gear1B" id="Gear1B">Gear 1</button>
+<button class="Gear2B" id="Gear2B">Gear 2</button>
+<button class="Gear3B" id="Gear3B">Gear 3</button>
+
+<button class="ShooterB" id="ShooterB">Boiler</button>
+<button class="ShooterR" id="ShooterR">Boiler</button>
+
+<button class="StartPosition1R" id="StartPosition1R">Start Position 1</button>
+<button class="StartPosition2R" id="StartPosition2R">Start Position 2</button>
+<button class="StartPosition3R" id="StartPosition3R">Start Position 3</button>
+
+<button class="StartPosition1B" id="StartPosition1B">Start Position 1</button>
+<button class="StartPosition2B" id="StartPosition2B">Start Position 2</button>
+<button class="StartPosition3B" id="StartPosition3B">Start Position 3</button>
+
+<button class="BaselineR" id="BaselineR">Baseline</button>
+<button class="BaselineB" id="BaselineB">Baseline</button>
+
+<button class="Compile" id="Compile">Compile</button>
+
+<canvas id="canvas"></canvas>
+</body>
+</html>

@@ -29,7 +29,7 @@ window.onload = function(){
 	height = canvas.height = window.innerHeight;
 
 	var field = document.createElement("img");
-	field.src = "file://C:/Users/John/Documents/TheEngine/Field.PNG";
+	field.src = "http://localhost/Field.PNG";
 
 	var lastX = 0;
 	var lastY = 0;
@@ -419,5 +419,6 @@ window.onload = function(){
 
 	document.getElementById("Compile").onclick = function() {
 		writeCode();
+		//WriteFile();
 	}
 }

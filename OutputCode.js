@@ -1,11 +1,11 @@
 function writeCode() {
-	var txtfile = "C:/Users/John/Documents/TheEngine/Output.txt";
+	var txtfile = "http://localhost/Output.txt";
 	var file = new File([""], txtfile);
 	var text;
 
 	if (start1RPress) {
 		text = new Blob(["START1R"], { type: "text/plain" });
-		file.write();
+		file.writeln();
 	} else if (start2RPress) {
 		text = new Blob(["START2R"], { type: "text/plain" });
 	} else if (start3RPress) {
